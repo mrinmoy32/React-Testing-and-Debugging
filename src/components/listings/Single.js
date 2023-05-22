@@ -1,7 +1,24 @@
+//@flow
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Single = ({item}) => {
+//type anotation for item
+
+type Item = {
+  item:{
+    id: Number,
+    title: String,
+    category: String,
+    description: String,
+    link: String,
+    release_date: String,
+    views: String,
+    image: String,
+  }
+}
+
+const Single = ({item}: Item ): => {
   return (
     <li className="col l6 s12">
       <div className="card">
