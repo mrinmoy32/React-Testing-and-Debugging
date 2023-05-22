@@ -4,13 +4,15 @@ import Single from './Single';
 
 export default class Grid extends Component {
   renderList() {
+    // eslint-disable-next-line react/destructuring-assignment
     return this.props.items.map((item) => (
-      <Single key={item.id} item={item}/>
+      // eslint-disable-next-line react/jsx-filename-extension
+      <Single key={item.id} item={item} />
     ));
   }
 
   render() {
-    return(
+    return (
       <div>
         <div className="row">
           <ul>
@@ -18,10 +20,11 @@ export default class Grid extends Component {
           </ul>
         </div>
       </div>
-    )
+    );
   }
 }
 
 Grid.propTypes = {
-  items: PropTypes.array.isRequired
+  // eslint-disable-next-line react/forbid-prop-types
+  items: PropTypes.array.isRequired,
 };
