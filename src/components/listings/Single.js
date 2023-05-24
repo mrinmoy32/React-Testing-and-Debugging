@@ -18,7 +18,7 @@ type Item = {
   }
 }
 
-const Single = ({item}: Item ): => {
+const Single = ({item}: Item ) => {
   return (
     <li className="col l6 s12">
       <div className="card">
