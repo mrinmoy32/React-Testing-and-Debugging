@@ -1,68 +1,103 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Testing and Debugging
 
-## Available Scripts
+This project demonstrates best practices for testing and debugging React applications using Jest, Flow, and ESLint.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Getting Started](#getting-started)
+- [Testing](#testing)
+  - [Running Tests](#running-tests)
+  - [Test Coverage](#test-coverage)
+- [Debugging](#debugging)
+- [Linting](#linting)
+- [Flow Type Checking](#flow-type-checking)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/mrinmoy32/React-Testing-and-Debugging
+   cd react-testing-debugging
+   ```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
 
-### `npm run build`
+   ```bash
+   npm install
+   ```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Testing
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Running Tests
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run tests, use the following command:
 
-### `npm run eject`
+```bash
+npm test
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This will run Jest and execute all test suites.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Test Coverage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+You can generate a coverage report using:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm test -- --coverage
+```
 
-## Learn More
+This will create a `coverage` directory containing HTML reports.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Debugging
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For debugging, you can use the browser's built-in debugging tools or integrate with VSCode or any other preferred IDE.
 
-### Code Splitting
+1. **Browser Debugging:**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+   - Run your application in development mode.
+   - Open the browser's developer tools (usually with `F12` or right-click and select 'Inspect').
+   - Navigate to the 'Sources' tab to set breakpoints, inspect variables, and step through code.
 
-### Analyzing the Bundle Size
+2. **VSCode Debugging:**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+   - Ensure you have the [VSCode Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension installed.
+   - Open the project in VSCode.
+   - Add breakpoints in your code.
+   - Press `F5` to start debugging.
 
-### Making a Progressive Web App
+## Linting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Linting is done using ESLint to maintain a consistent code style.
 
-### Advanced Configuration
+To lint your code, use:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```bash
+npm run lint
+```
 
-### Deployment
+To automatically fix lint issues, run:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```bash
+npm run lint:fix
+```
 
-### `npm run build` fails to minify
+## Flow Type Checking
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project uses Flow for static type checking.
+
+To check for Flow errors, use:
+
+```bash
+npm run flow
+```
+
+## Contributing
+
+Feel free to contribute by opening issues or submitting pull requests. Please follow the [Contributing Guidelines](CONTRIBUTING.md).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
